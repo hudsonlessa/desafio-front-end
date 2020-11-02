@@ -22,11 +22,12 @@ O desafio é realizar o desenvolvimento front-end da homepage de um jornal fict�
 * O mapa pode ser Google Maps ou OpenStreetMap.
 
 ## Observações
-* Não usar jQuery. Usar React ou ES6+ vanilla.
+* Não usar jQuery. Usar React (de preferência com hooks) ou ES6+ vanilla.
 * Você está livre para escolher a estrutura de diretórios da aplicação 
 * Preferencialmente, usar SASS para o CSS.
 * Você não deve utilizar nenhum framework CSS (Bootstrap, Foundation e etc) neste desafio.
-* Os arquivos .json não podem ser alterados
+* Os arquivos .json não podem ser alterados.
+* Mesmo não havendo layout, é imprescindível existir uma versão funcional para mobile. Sinta-se livre para fazer as alterações visuais necessárias para tal (como por exemplo um menu hambúrguer, se preferir).
 * Dúvida? Entre em contato por email: daniel.lima@oglobo.com.br
 
 ## Arquivos
