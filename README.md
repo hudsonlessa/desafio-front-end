@@ -2,7 +2,7 @@
 
 
 
-View this README in other languages
+View this README in other languages:
 
 * [Português do Brasil](README.pt-BR.md)
 

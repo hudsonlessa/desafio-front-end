@@ -91,7 +91,7 @@ Antes de começar, você precisará ter instalado em sua máquina as seguintes f
 
 ## Contato
 
-Hudson Lessa - [LinkedIn](http://linkedin/in/hudsonlessa) - contato@hudsonlessa.com
+Hudson Lessa - [LinkedIn](http://linkedin.com/in/hudsonlessa) - contato@hudsonlessa.com
 
 Link do projeto: [minutonews.hudsonlessa.com](http://minutonews.hudsonlessa.com)
 
