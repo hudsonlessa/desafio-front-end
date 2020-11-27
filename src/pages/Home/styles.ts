@@ -125,8 +125,15 @@ export const Main = styled.main<MainProps>`
       margin-top: 70px;
 
       .editoria {
-        border-left: 3px solid var(--primary-color);
+        @media (max-width: 694px) {
+          padding-left: 0;
+          padding-top: 30px;
+          border-left: none;
+          border-top: 3px solid var(--primary-color);
+        }
+
         padding-left: 30px;
+        border-left: 3px solid var(--primary-color);
 
         .meta {
           display: flex;

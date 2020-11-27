@@ -16,6 +16,10 @@ export default createGlobalStyle`
   body {
     font-family: "Georgia", serif;
     min-height: calc(100vh - 72px);
+
+    @media (max-width: 996px) {
+      max-width: 100vh;
+    }
   }
 
   body, label, input, textarea, button {
