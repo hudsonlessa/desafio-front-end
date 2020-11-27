@@ -40,6 +40,7 @@ export const Container = styled.header`
 
     .dropdown {
       position: relative;
+      z-index: 1;
 
       &:hover {
         .dropdown-menu {

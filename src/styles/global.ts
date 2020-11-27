@@ -57,6 +57,7 @@ export default createGlobalStyle`
 
   a {
     text-decoration: none;
+    color: inherit;
   }
 
   select {
@@ -81,5 +82,11 @@ export default createGlobalStyle`
   label {
     display: flex;
     flex-direction: column;
+  }
+
+  hr {
+    max-width: 1090px;
+    border-top: 2px dashed #666;
+    margin: 105px auto 0;
   }
 `;

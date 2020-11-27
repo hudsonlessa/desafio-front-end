@@ -1,18 +1,72 @@
 import styled from 'styled-components';
 
 export const Main = styled.main`
-  hr {
-    max-width: 1090px;
-    border-top: 2px dashed #666;
-    margin: 0 auto;
-    margin-top: 105px;
-  }
-
   #hero {
     height: 500px;
 
     .slider {
-      .slide {
+      position: relative;
+      height: 100%;
+
+      .arrow {
+        width: 52.27px;
+        height: 72px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+
+        &--left {
+          left: 20px;
+        }
+
+        &--right {
+          right: 20px;
+          transform: translateY(-50%) rotate(180deg);
+        }
+      }
+
+      .slides {
+        display: flex;
+        height: 100%;
+        overflow: hidden;
+
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+
+        .slide {
+          scroll-snap-align: start;
+        }
+      }
+
+      .slide,
+      img {
+        width: 100vw;
+        height: 100%;
+      }
+
+      .slider__selectors {
+        display: flex;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 33px;
+      }
+
+      .selector {
+        width: 20.77px;
+        height: 21px;
+        background: #fff;
+        border: 3px solid #000;
+        cursor: pointer;
+
+        &--active {
+          border-color: var(--primary-color);
+        }
+
+        + .selector {
+          margin-left: 15px;
+        }
       }
     }
   }
@@ -20,22 +74,24 @@ export const Main = styled.main`
   #editorias {
     max-width: 1090px;
     margin: 0 auto;
-    margin-top: 119px auto;
+    margin: 119px auto 0;
 
     header {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
 
       div {
         display: flex;
+        flex-wrap: wrap;
+
+        + div {
+          margin-left: 18px;
+        }
 
         div {
           display: flex;
           align-items: center;
-        }
-
-        & + div {
-          margin-left: 18px;
         }
 
         p {
@@ -50,7 +106,7 @@ export const Main = styled.main`
 
     .editorias {
       display: grid;
-      grid-template-columns: repeat(3, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       grid-gap: 55px;
       margin-top: 70px;
 
@@ -70,6 +126,8 @@ export const Main = styled.main`
         }
 
         img {
+          width: 100%;
+          height: 163px;
           margin-top: 12px;
         }
 
@@ -77,17 +135,16 @@ export const Main = styled.main`
           font-size: 27.98px;
           margin-top: 22px;
 
-          & + p {
+          + p {
             margin-top: 17px;
             color: #666;
           }
         }
 
         a {
-          display: block;
+          display: inline-block;
           margin-top: 20px;
           font-weight: 700;
-          color: #000;
         }
       }
     }
@@ -101,7 +158,7 @@ export const Main = styled.main`
     > div {
       margin-top: 65px;
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       grid-gap: 70px;
     }
 
@@ -112,40 +169,31 @@ export const Main = styled.main`
     p {
       column-count: 2;
     }
+
+    .mais-acessadas__texto {
+      align-self: flex-end;
+
+      h1 + p {
+        margin-top: 29px;
+      }
+    }
   }
 
   iframe {
     width: 100%;
     height: 448px;
     margin-top: 118px;
+    display: block;
   }
 
   #contato {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
-    .endereco {
-      margin-top: 30px;
-    }
-
-    .telefones {
-      margin-top: 45px;
-
-      & + p {
-        margin-top: 50px;
-
-        & + p {
-          margin-top: 50px;
-        }
-      }
-    }
-
-    .frame {
-      &:nth-of-type(1) {
-        > .wrapper {
-          max-width: 516px;
-          margin: 0 35px 0 auto;
-        }
+    .frame--info {
+      .wrapper {
+        max-width: 516px;
+        margin: 0 35px 0 auto;
 
         h1 {
           margin-top: 136px;
@@ -153,30 +201,39 @@ export const Main = styled.main`
 
         h2 {
           margin-top: 62px;
-          font-size: 27.98px;
-
-          & + p {
-          }
-        }
-      }
-
-      &:nth-of-type(2) {
-        background: var(--primary-color);
-        color: #fff;
-
-        > * {
-          max-width: 505px;
-          margin-left: 35px;
         }
 
-        h1 {
-          font-size: 27.98px;
+        .endereco {
+          margin-top: 30px;
+        }
+
+        .telefones {
+          margin-top: 45px;
+        }
+
+        a {
+          display: inline-block;
+        }
+
+        a,
+        a + p {
+          margin-top: 50px;
         }
       }
     }
 
-    form {
-      margin: 236px 0 114px;
+    .frame--form {
+      background: var(--primary-color);
+      color: #fff;
+
+      form {
+        margin: 236px auto 114px 35px;
+        max-width: 505px;
+      }
+    }
+
+    h2 {
+      font-size: 27.98px;
     }
   }
 `;

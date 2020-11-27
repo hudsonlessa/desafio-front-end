@@ -3,7 +3,7 @@ import { Container } from './styles';
 
 const ContactForm: React.FC = () => (
   <Container>
-    <h1>Mande uma mensagem</h1>
+    <h2>Mande uma mensagem</h2>
     <label htmlFor="nome">
       Seu nome:
       <input required />
