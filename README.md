@@ -1,45 +1,100 @@
-# Teste - Front-End
-O desafio é realizar o desenvolvimento front-end da homepage de um jornal fictício. O desenvolvimento deve seguir fielmente o layout disponibilizado nos arquivos abaixo (espaçamento, cores, tipografia e etc). Você não deve utilizar nenhum framework CSS (Bootstrap, Foundation e etc) neste desafio.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a38df661-4ef8-4b0a-91f4-b759885804da/deploy-status)](https://app.netlify.com/sites/minuto-news/deploys)
 
-## Instruções - Topo
-* O submenu deve ser ativado no hover
-* Os links do submenu não precisam ser verídicos
 
-## Instruções - Slide
-* O nome das imagens, bem como a ordem delas, encontra-se no JSON [slide](Arquivos/JSON/slide.json)
 
-## Instruções - Editorias
-* A lista de editorias deve ser gerada a partir do JSON [notícias](Arquivos/JSON/noticias.json)
-* As notícias devem ser exibidas de acordo com a editoria que está selecionada no selectbox, se nenhuma editoria estiver selecionada, todas as notícias precisam aparecer
-* Deverá ser possível ordenar as notícias por data de publicacão (da mais recente para a mais antiga) ou por ordem alfabética
-* As notícias dessa sessão devem vir do arquivo JSON chamado [notícias](Arquivos/JSON/noticias.json)
-* O conteúdo da notícia também deve ser gerado dinamicamente (data, editoria, foto, título e texto)
+View this README in other languages
 
-## Instruções - Gráfico
-* Fique à vontade para usar a ferramenta que preferir para gerar o gráfico. A única exigência é que ele seja gerado dinamicamente
+* [Português do Brasil](README.pt-BR.md)
 
-## Instruções - Mapa
-* O mapa pode ser Google Maps ou OpenStreetMap.
 
-## Observações
-* Não usar jQuery. Usar React (de preferência com hooks) ou ES6+ vanilla.
-* Você está livre para escolher a estrutura de diretórios da aplicação 
-* Preferencialmente, usar SASS para o CSS.
-* Você não deve utilizar nenhum framework CSS (Bootstrap, Foundation e etc) neste desafio.
-* Os arquivos .json não podem ser alterados.
-* Mesmo não havendo layout, é imprescindível existir uma versão funcional para mobile. Sinta-se livre para fazer as alterações visuais necessárias para tal (como por exemplo um menu hambúrguer, se preferir).
-* Dúvida? Entre em contato por email: daniel.lima@oglobo.com.br
 
-## Arquivos
-- Layout [aqui](Arquivos/Layout)
-- Imagens [aqui](Arquivos/Imagens)
-- JSONS [aqui](Arquivos/JSON)
+<p align="center">
+  <a href="http://minutonews.hudsonlessa.com">
+    <img src="src/assets/logo.svg" alt="Logo" width="360">
+  </a>
 
-## Como submeter seu projeto
-- Fork esse projeto
-- Coloque seu projeto no repositório
-- Escreva no arquivo README.md as instruções para rodar o mesmo 
-- Envie o link do repositório para daniel.lima@oglobo.com.br, com o assunto: TESTE - Front-End O Globo
-- *Se puder subir o projeto em algum lugar para facilitar a visualização, será um diferencial.*
+  <h3 align="center">Minuto News</h3>
 
-## Boa sorte!
+  <p align="center">
+    <br />
+    <a href="http://minutonews.hudsonlessa.com">View demo</a>
+  </p>
+</p>
+
+<details open="open">
+  <summary>Table of contents</summary>
+  <ol>
+    <li>
+      <a href="#about">About</a>
+      <ul>
+        <li><a href="#built-with">Built with</a></li>
+        <li><a href="#features">Features</a></li>
+      </ul>
+    </li>
+    <li>
+    <a href="#running">Running</a></li>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installing">Installing</a></li>
+      </ul>
+    </li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
+
+
+
+## About
+
+[![Minuto News screenshot][product-screenshot]](http://minutonews.hudsonlessa.com)
+
+### Built with
+
+* [React](http://reactjs.org)
+* [TypeScript](http://typescriptlang.org)
+
+### Features
+1. Interactive images slider
+2. Categorized by *editoria* news visualization
+* Filtering by *editoria*
+* Sorting by date and by title
+3. Dynamic bar chart showing the most viwed *editorias*
+
+
+
+## Running
+
+### Prerequisites
+
+Before starting, you'll need the following tools installed on your machine:
+1. [Node and NPM](http://nodejs.org)
+2. [Yarn](http://yarnpkg.com)
+
+### Installing
+
+1. Download this repository
+2. Access the downloaded repository root folder via CLI (Command Line Interface: cmd, PowerShell, bash, etc)
+3. Run the following command and wait until the dependencies installation finishes:
+  ```sh
+    yarn
+  ```
+4. Run the following command to start the project:
+  ```sh
+    yarn start
+  ```
+5. Wait until your default browser pops up on the project page. You can manually access the project on your favorite browser with the following address, if this doesn't happen:
+  ```
+  localhost:3000
+  ```
+
+
+
+## Contact
+
+Hudson Lessa - [LinkedIn](http://linkedin/in/hudsonlessa) - contact@hudsonlessa.com
+
+Project link: [minutonews.hudsonlessa.com](http://minutonews.hudsonlessa.com)
+
+
+
+[product-screenshot]: images/product-screenshot.png

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import triangle from '../../assets/triangle.png';
 
 interface MainProps {
   activeSlide: number;
@@ -99,21 +98,18 @@ export const Main = styled.main<MainProps>`
         display: flex;
         flex-wrap: wrap;
 
-        :first-of-type {
-          margin-right: 18px;
-        }
-
         div {
           display: flex;
           align-items: center;
+
+          :first-of-type {
+            margin-right: 18px;
+          }
         }
 
         p {
           font-size: 22px;
-        }
-
-        select {
-          margin-left: 21px;
+          margin-right: 21px;
         }
       }
     }

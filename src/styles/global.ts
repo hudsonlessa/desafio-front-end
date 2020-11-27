@@ -16,10 +16,6 @@ export default createGlobalStyle`
   body {
     font-family: "Georgia", serif;
     min-height: calc(100vh - 72px);
-
-    @media (max-width: 996px) {
-      max-width: 100vh;
-    }
   }
 
   body, label, input, textarea, button {
@@ -65,13 +61,15 @@ export default createGlobalStyle`
   }
 
   select {
+    -webkit-appearance: none;
     padding: 10px 8px;
+    border: 0;
+    border-radius: 0;
     font-family: 'Verdana', sans-serif;
     font-size: 18.4px;
     text-transform: uppercase;
     background: #000;
     color: #fff;
-    border: 0;
   }
 
   section {
