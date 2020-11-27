@@ -39,6 +39,10 @@ export const Container = styled.header`
         text-align: right;
       }
 
+      li {
+        cursor: pointer;
+      }
+
       > li {
         a {
           font-size: 24px;
@@ -65,6 +69,14 @@ export const Container = styled.header`
       position: relative;
       font-size: 24px;
 
+      @media (min-width: 996px) {
+        &:hover {
+          .dropdown-menu {
+            display: initial;
+          }
+        }
+      }
+
       img {
         width: 11px;
         height: 11px;
@@ -77,14 +89,6 @@ export const Container = styled.header`
           min-width: initial;
           padding: initial;
           border-bottom: none;
-        }
-
-        @media (min-width: 996px) {
-          &:hover {
-            .dropdown-menu {
-              display: initial;
-            }
-          }
         }
 
         &.visible {

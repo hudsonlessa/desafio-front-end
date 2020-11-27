@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import triangle from '../../assets/triangle.png';
 
 interface MainProps {
   activeSlide: number;
