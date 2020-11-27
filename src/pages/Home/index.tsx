@@ -25,11 +25,37 @@ interface Editoria {
 
 const Home: React.FC = () => {
   const [slides, setSlides] = useState<string[]>([]);
-  const [filter, setFilter] = useState<string>('Nada');
-  const [sorter, setSorter] = useState<string>('Título');
-  const [categorias, setCategorias] = useState<string[]>([]);
+  const [activeSlide, setActiveSlide] = useState<number>(1);
   const [noticias, setNoticias] = useState<Noticia[]>([]);
+  const [categories, setCategories] = useState<string[]>([]);
+  const [sorter, setSorter] = useState<string>('Título');
+  const [filter, setFilter] = useState<string>('Nenhum filtro');
   const [editorias, setEditorias] = useState<Editoria[]>([]);
+
+  const slidesRef = useRef<HTMLUListElement>(null);
+
+  useEffect(() => {
+    if (slidesRef.current) {
+      slidesRef.current.scrollLeft =
+        slidesRef.current.offsetWidth * (activeSlide - 1);
+    }
+  }, [activeSlide]);
+
+  const handleSelectorClick = (index: number) => {
+    setActiveSlide(index + 1);
+  };
+
+  const handleLeftArrowClick = () => {
+    if (!(activeSlide <= 1)) {
+      setActiveSlide(activeSlide - 1);
+    }
+  };
+
+  const handleRightArrowClick = () => {
+    if (!(activeSlide >= slides.length)) {
+      setActiveSlide(activeSlide + 1);
+    }
+  };
 
   useEffect(() => {
     setSlides(slidesJSON[0].imagens);
@@ -48,7 +74,7 @@ const Home: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    setCategorias(
+    setCategories(
       noticiasJSON[0].Editorias.map(editoria => {
         return editoria.Editoria;
       }),
@@ -57,7 +83,7 @@ const Home: React.FC = () => {
 
   useEffect(() => {
     setNoticias([]);
-    if (filter !== 'Nada') {
+    if (filter !== 'Nenhum filtro') {
       const [filteredEditoria] = noticiasJSON[0].Editorias.filter(
         editoria => editoria.Editoria === filter,
       );
@@ -139,29 +165,21 @@ const Home: React.FC = () => {
     setSorter(value);
   };
 
-  const slidesRef = useRef<HTMLUListElement>(null);
-
-  const slideLeft = () => {
-    if (slidesRef.current) {
-      slidesRef.current.scrollLeft -= slidesRef.current.offsetWidth;
-    }
-  };
-
-  const slideRight = () => {
-    if (slidesRef.current) {
-      slidesRef.current.scrollLeft += slidesRef.current.offsetWidth;
-    }
-  };
-
   return (
     <>
       <Header />
-      <Main>
+      <Main activeSlide={activeSlide}>
         <section id="hero">
           <div className="slider">
             <ul className="slider__selectors">
-              {slides.map(() => {
-                return <li className="selector" />;
+              {slides.map((slide, index) => {
+                return (
+                  <li
+                    onClick={() => handleSelectorClick(index)}
+                    onKeyDown={() => handleSelectorClick(index)}
+                    className="selector"
+                  />
+                );
               })}
             </ul>
 
@@ -169,15 +187,15 @@ const Home: React.FC = () => {
               className="arrow arrow--left"
               src={arrow}
               alt="Ícone de seta"
-              onClick={slideLeft}
-              onKeyDown={slideLeft}
+              onClick={handleLeftArrowClick}
+              onKeyDown={handleLeftArrowClick}
             />
             <img
               className="arrow arrow--right"
               src={arrow}
               alt="Ícone de seta"
-              onClick={slideRight}
-              onKeyDown={slideRight}
+              onClick={handleRightArrowClick}
+              onKeyDown={handleRightArrowClick}
             />
 
             <ul className="slides" ref={slidesRef}>
@@ -205,8 +223,8 @@ const Home: React.FC = () => {
               <div>
                 <p>Filtar por:</p>
                 <select onChange={e => handleFilter(e.target.value)}>
-                  <option>Nada</option>
-                  {categorias.map(categoria => {
+                  <option>Nenhum filtro</option>
+                  {categories.map(categoria => {
                     return <option>{categoria}</option>;
                   })}
                 </select>

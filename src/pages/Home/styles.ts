@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
-export const Main = styled.main`
+interface MainProps {
+  activeSlide: number;
+}
+
+export const Main = styled.main<MainProps>`
   #hero {
     height: 500px;
 
@@ -51,21 +55,21 @@ export const Main = styled.main`
         left: 50%;
         transform: translateX(-50%);
         bottom: 33px;
-      }
 
-      .selector {
-        width: 20.77px;
-        height: 21px;
-        background: #fff;
-        border: 3px solid #000;
-        cursor: pointer;
+        .selector {
+          width: 20.77px;
+          height: 21px;
+          background: #fff;
+          border: 3px solid #000;
+          cursor: pointer;
 
-        &--active {
-          border-color: var(--primary-color);
-        }
+          &:nth-of-type(${props => props.activeSlide}) {
+            border-color: var(--primary-color);
+          }
 
-        + .selector {
-          margin-left: 15px;
+          + .selector {
+            margin-left: 15px;
+          }
         }
       }
     }
