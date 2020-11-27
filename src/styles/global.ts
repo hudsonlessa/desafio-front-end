@@ -89,4 +89,5 @@ export default createGlobalStyle`
     border-top: 2px dashed #666;
     margin: 105px auto 0;
   }
+
 `;

@@ -49,6 +49,10 @@ export const Main = styled.main<MainProps>`
         height: 100%;
       }
 
+      img {
+        object-fit: cover;
+      }
+
       .slider__selectors {
         display: flex;
         position: absolute;
@@ -77,6 +81,7 @@ export const Main = styled.main<MainProps>`
 
   #editorias {
     max-width: 1090px;
+    padding: 0 20px;
     margin: 0 auto;
     margin: 119px auto 0;
 
@@ -86,11 +91,15 @@ export const Main = styled.main<MainProps>`
       justify-content: space-between;
 
       div {
+        @media (max-width: 854px) {
+          margin-top: 20px;
+        }
+
         display: flex;
         flex-wrap: wrap;
 
-        + div {
-          margin-left: 18px;
+        :first-of-type {
+          margin-right: 18px;
         }
 
         div {
@@ -133,6 +142,7 @@ export const Main = styled.main<MainProps>`
           width: 100%;
           height: 163px;
           margin-top: 12px;
+          object-fit: cover;
         }
 
         h1 {
@@ -156,6 +166,7 @@ export const Main = styled.main<MainProps>`
 
   #editorias-mais-acessadas {
     max-width: 1090px;
+    padding: 0 20px;
     margin: 0 auto;
     margin-top: 118px;
 
@@ -171,7 +182,9 @@ export const Main = styled.main<MainProps>`
     }
 
     p {
-      column-count: 2;
+      @media (min-width: 560px) {
+        column-count: 2;
+      }
     }
 
     .mais-acessadas__texto {
@@ -196,12 +209,9 @@ export const Main = styled.main<MainProps>`
 
     .frame--info {
       .wrapper {
+        padding: 0 20px;
         max-width: 516px;
-        margin: 0 35px 0 auto;
-
-        h1 {
-          margin-top: 136px;
-        }
+        margin: 136px 35px 136px auto;
 
         h2 {
           margin-top: 62px;
@@ -231,8 +241,8 @@ export const Main = styled.main<MainProps>`
       color: #fff;
 
       form {
-        margin: 236px auto 114px 35px;
         max-width: 505px;
+        margin: 236px 35px 114px 35px;
       }
     }
 

@@ -4,12 +4,20 @@ export const Container = styled.header`
   border-bottom: 3px solid var(--primary-color);
 
   nav {
+    @media (max-width: 996px) {
+      margin: 20px 0;
+    }
+    padding: 0 20px;
     display: flex;
     max-width: 1090px;
     margin: 52px auto 22px;
     justify-content: space-between;
 
-    a {
+    > a {
+      @media (max-width: 996px) {
+        display: none;
+      }
+
       img {
         width: 351px;
         height: 81px;
@@ -20,6 +28,16 @@ export const Container = styled.header`
       display: flex;
       align-self: flex-end;
       margin-bottom: 16px;
+
+      &.visible {
+        display: initial;
+      }
+
+      @media (max-width: 996px) {
+        display: none;
+        flex-direction: column;
+        text-align: right;
+      }
 
       > li {
         a {
@@ -33,6 +51,11 @@ export const Container = styled.header`
         }
 
         & + li {
+          @media (max-width: 996px) {
+            margin: 0;
+            margin-top: 20px;
+          }
+
           margin-left: 40px;
         }
       }
@@ -40,37 +63,50 @@ export const Container = styled.header`
 
     .dropdown {
       position: relative;
-      z-index: 1;
+      font-size: 24px;
 
-      &:hover {
-        .dropdown-menu {
-          display: flex;
-        }
-      }
-
-      a {
-        display: flex;
-        align-items: center;
-
-        img {
-          width: 11px;
-          height: 11px;
-          margin-left: 4px;
-        }
+      img {
+        width: 11px;
+        height: 11px;
+        margin-left: 4px;
       }
 
       .dropdown-menu {
+        @media (max-width: 996px) {
+          position: static;
+          min-width: initial;
+          padding: initial;
+          border-bottom: none;
+        }
+
+        @media (min-width: 996px) {
+          &:hover {
+            .dropdown-menu {
+              display: initial;
+            }
+          }
+        }
+
+        &.visible {
+          display: initial;
+        }
+
         display: none;
         flex-direction: column;
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: 25px;
         min-width: 220px;
         padding: 15px 18px;
         border-bottom: 3px solid var(--primary-color);
-        position: absolute;
-        top: 25px;
-        left: 0;
         background: #fff;
 
         li {
+          @media (max-width: 996px) {
+            margin-top: 20px;
+          }
+
           a {
             font-size: 16px;
 
