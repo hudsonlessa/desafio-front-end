@@ -60,7 +60,7 @@ View this README in other languages:
 
 This project has been proposed as a test in a selective process for Front-End Developer.
 
-The project's objectives revolved around developing a fictional newspaper home page front-end, carefully following the specified design, being restricted any CSS framework usage. The objectives also included employment of JavaScript technologies and CSS pre-processors for development.
+The project's objectives revolved around developing a fictional newspaper home page front-end, carefully following the specified design, being restricted any CSS framework usage. The objectives also included the employment of JavaScript technologies and CSS preprocessors for development.
 
 ### Built with
 

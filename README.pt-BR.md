@@ -60,7 +60,7 @@ View this README in other languages:
 
 Esse projeto foi proposto como teste em um processo seletivo para Desenvolvedor Front-End.
 
-Os objetivos do projeto giravam em torno do desenvolvimento do front-end da home page de um jornal fictício seguindo fielmente o *design* disponibilizado, sendo vedado, porém, o uso de *frameworks* CSS. Os objetivos incluíam o emprego de tecnologias JavaScript e de pré-processadores de CSS para o desenvolvimento.
+Os objetivos do projeto giravam em torno do desenvolvimento do front-end da home page de um jornal fictício seguindo fielmente o *design* disponibilizado, sendo vedado, porém, o uso de *frameworks* CSS. Os objetivos incluíam, também, o emprego de tecnologias JavaScript e de pré-processadores de CSS para o desenvolvimento.
 
 ### Construído com
 
