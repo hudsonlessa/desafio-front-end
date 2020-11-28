@@ -27,14 +27,14 @@ View this README in other languages:
     <li>
       <a href="#sobre">Sobre</a>
       <ul>
-        <li><a href="#construido-com">Construído com</a></li>
+        <li><a href="#construído-com">Construído com</a></li>
         <li><a href="#funcionalidades">Funcionalidades</a></li>
       </ul>
     </li>
     <li>
     <a href="#executando">Executando</a></li>
       <ul>
-        <li><a href="#pre-requisitos">Pré-requisitos</a></li>
+        <li><a href="#pré-requisitos">Pré-requisitos</a></li>
         <li><a href="#instalacao">Instalação</a></li>
       </ul>
     </li>
@@ -47,6 +47,10 @@ View this README in other languages:
 ## Sobre
 
 [![Captura de tela do Minuto News][product-screenshot]](http://minutonews.hudsonlessa.com)
+
+Esse projeto foi proposto pelo O Globo como teste em seu processo seletivo para Desenvolvedor Front-End.
+
+Design e imagens: O Globo
 
 ### Construído com
 
