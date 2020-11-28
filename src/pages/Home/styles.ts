@@ -1,84 +1,6 @@
 import styled from 'styled-components';
 
-interface MainProps {
-  activeSlide: number;
-}
-
-export const Main = styled.main<MainProps>`
-  #hero {
-    height: 500px;
-
-    .slider {
-      position: relative;
-      height: 100%;
-
-      .arrow {
-        width: 52.27px;
-        height: 72px;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        cursor: pointer;
-
-        &--left {
-          left: 20px;
-        }
-
-        &--right {
-          right: 20px;
-          transform: translateY(-50%) rotate(180deg);
-        }
-      }
-
-      .slides {
-        display: flex;
-        height: 100%;
-        overflow: hidden;
-
-        scroll-behavior: smooth;
-        scroll-snap-type: x mandatory;
-
-        .slide {
-          scroll-snap-align: start;
-        }
-      }
-
-      .slide,
-      img {
-        width: 100vw;
-        height: 100%;
-      }
-
-      img {
-        object-fit: cover;
-      }
-
-      .slider__selectors {
-        display: flex;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: 33px;
-
-        .selector {
-          width: 20.77px;
-          height: 21px;
-          background: #fff;
-          border: 3px solid #000;
-          cursor: pointer;
-
-          &:nth-of-type(${props => props.activeSlide}) {
-            border-color: var(--primary-color);
-          }
-
-          + .selector {
-            margin-left: 15px;
-          }
-        }
-      }
-    }
-  }
-
+export const Main = styled.main`
   #editorias {
     max-width: 1090px;
     padding: 0 20px;
@@ -87,49 +9,76 @@ export const Main = styled.main<MainProps>`
 
     header {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+      flex-direction: column;
 
-      div {
-        @media (max-width: 854px) {
-          margin-top: 20px;
-        }
+      @media (min-width: 996px) {
+        flex-direction: row;
+        justify-content: space-between;
+      }
 
-        display: flex;
-        flex-wrap: wrap;
+      .selects {
+        margin-top: 40px;
 
-        div {
+        @media (min-width: 996px) {
           display: flex;
-          align-items: center;
-
-          :first-of-type {
-            margin-right: 18px;
-          }
+          margin-top: 0;
         }
 
-        p {
-          font-size: 22px;
-          margin-right: 21px;
+        .select-wrapper {
+          @media (min-width: 996px) {
+            display: flex;
+            align-items: center;
+          }
+
+          + .select-wrapper {
+            margin-top: 20px;
+
+            @media (min-width: 996px) {
+              margin-top: 0;
+              margin-left: 20px;
+            }
+          }
+
+          p {
+            font-size: 22px;
+            margin-right: 21px;
+          }
+
+          select {
+            margin-top: 10px;
+
+            @media (min-width: 996px) {
+              margin-top: 0;
+            }
+          }
         }
       }
     }
 
     .editorias {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-template-columns: 1fr;
       grid-gap: 55px;
       margin-top: 70px;
 
-      .editoria {
-        @media (max-width: 694px) {
-          padding-left: 0;
-          padding-top: 30px;
-          border-left: none;
-          border-top: 3px solid var(--primary-color);
-        }
+      @media (min-width: 560px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
 
-        padding-left: 30px;
-        border-left: 3px solid var(--primary-color);
+      @media (min-width: 992px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .editoria {
+        padding-top: 30px;
+        border-top: 3px solid var(--primary-color);
+
+        @media (min-width: 560px) {
+          padding-top: 0;
+          padding-left: 30px;
+          border-top: 0;
+          border-left: 3px solid var(--primary-color);
+        }
 
         .meta {
           display: flex;
@@ -144,9 +93,13 @@ export const Main = styled.main<MainProps>`
 
         img {
           width: 100%;
-          height: 163px;
+          height: 240px;
           margin-top: 12px;
           object-fit: cover;
+
+          @media (min-width: 992px) {
+            height: 163px;
+          }
         }
 
         h1 {
@@ -177,7 +130,7 @@ export const Main = styled.main<MainProps>`
     > div {
       margin-top: 65px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       grid-gap: 70px;
     }
 
@@ -186,7 +139,7 @@ export const Main = styled.main<MainProps>`
     }
 
     p {
-      @media (min-width: 560px) {
+      @media (min-width: 768px) {
         column-count: 2;
       }
     }
@@ -246,7 +199,11 @@ export const Main = styled.main<MainProps>`
 
       form {
         max-width: 505px;
-        margin: 236px 35px 114px 35px;
+        margin: 114px 35px 114px 35px;
+
+        @media (min-width: 768px) {
+          margin: 236px 35px 114px 35px;
+        }
       }
     }
 

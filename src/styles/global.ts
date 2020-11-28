@@ -32,6 +32,10 @@ export default createGlobalStyle`
     }
   }
 
+  input, textarea {
+    border-radius: 0;
+  }
+
   input {
     height: 37px;
     padding-left: 16px;
@@ -63,7 +67,6 @@ export default createGlobalStyle`
   select {
     -webkit-appearance: none;
     padding: 10px 8px;
-    border: 0;
     border-radius: 0;
     font-family: 'Verdana', sans-serif;
     font-size: 18.4px;
@@ -87,9 +90,9 @@ export default createGlobalStyle`
   }
 
   hr {
-    max-width: 1090px;
+    width: 1090px;
+    max-width: calc(100% - 40px);
     border-top: 2px dashed #666;
     margin: 105px auto 0;
   }
-
 `;

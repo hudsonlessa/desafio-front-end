@@ -1,14 +1,14 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a38df661-4ef8-4b0a-91f4-b759885804da/deploy-status)](https://app.netlify.com/sites/minuto-news/deploys)
 
-<br>
+<br />
 
 View this README in other languages:
 
 * [Português do Brasil](README.pt-BR.md)
 
-<br>
-<br>
-<br>
+<br />
+<br />
+<br />
 
 <p align="center">
   <a href="http://minutonews.hudsonlessa.com">
@@ -23,9 +23,9 @@ View this README in other languages:
   </p>
 </p>
 
-<br>
-<br>
-<br>
+<br />
+<br />
+<br />
 
 <details open="open">
   <summary>Table of contents</summary>
@@ -48,15 +48,15 @@ View this README in other languages:
   </ol>
 </details>
 
-<br>
+<br />
 
 ## About
 
-<br>
+<br />
 
 [![Minuto News screenshot][product-screenshot]](http://minutonews.hudsonlessa.com)
 
-<br>
+<br />
 
 This project has been proposed as a test in a selective process for Front-End Developer.
 
@@ -74,7 +74,7 @@ The project's objectives revolved around developing a fictional newspaper home p
     * Sorting by date and by title
 3. Dynamic bar chart showing the most viewed *editorias*
 
-<br>
+<br />
 
 ## Running
 
@@ -106,7 +106,7 @@ Before starting, you'll need the following tools installed on your machine:
     localhost:3000
   ```
 
-<br>
+<br />
 
 ## Contact
 

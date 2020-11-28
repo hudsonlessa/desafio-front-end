@@ -1,14 +1,14 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a38df661-4ef8-4b0a-91f4-b759885804da/deploy-status)](https://app.netlify.com/sites/minuto-news/deploys)
 
-<br>
+<br />
 
 View this README in other languages:
 
 * [English](README.md)
 
-<br>
-<br>
-<br>
+<br />
+<br />
+<br />
 
 <p align="center">
   <a href="http://minutonews.hudsonlessa.com">
@@ -23,12 +23,12 @@ View this README in other languages:
   </p>
 </p>
 
-<br>
-<br>
-<br>
+<br />
+<br />
+<br />
 
 <details open="open">
-  <summary>Lista de conteúdo</summary>
+  <summary>Índice de conteúdo</summary>
   <ol>
     <li>
       <a href="#sobre">Sobre</a>
@@ -48,15 +48,15 @@ View this README in other languages:
   </ol>
 </details>
 
-<br>
+<br />
 
 ## Sobre
 
-<br>
+<br />
 
 [![Captura de tela do Minuto News][product-screenshot]](http://minutonews.hudsonlessa.com)
 
-<br>
+<br />
 
 Esse projeto foi proposto como teste em um processo seletivo para Desenvolvedor Front-End.
 
@@ -74,7 +74,7 @@ Os objetivos do projeto giravam em torno do desenvolvimento do front-end da home
 * Ordenação por data e por título
 3. Gráfico de barras dinâmico exibindo as editorias mais visualizadas
 
-<br>
+<br />
 
 ## Executando
 
@@ -106,7 +106,7 @@ Antes de começar, você precisará ter instalado em sua máquina as seguintes f
   localhost:3000
   ```
 
-<br>
+<br />
 
 ## Contato
 

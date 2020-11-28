@@ -1,13 +1,12 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Main } from './styles';
+
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import ContactForm from '../../components/ContactForm';
+import Slider from '../../components/Slider';
 import Chart from '../../components/Chart';
+import ContactForm from '../../components/ContactForm';
 
-import arrow from '../../assets/arrow.png';
-
-import slidesJSON from '../../assets/slide.json';
 import noticiasJSON from '../../assets/noticias.json';
 
 interface Noticia {
@@ -24,45 +23,14 @@ interface Editoria {
 }
 
 const Home: React.FC = () => {
-  const [slides, setSlides] = useState<string[]>([]);
-  const [activeSlide, setActiveSlide] = useState<number>(1);
   const [noticias, setNoticias] = useState<Noticia[]>([]);
   const [categories, setCategories] = useState<string[]>([]);
   const [sorter, setSorter] = useState<string>('Título');
   const [filter, setFilter] = useState<string>('Nenhum filtro');
   const [editorias, setEditorias] = useState<Editoria[]>([]);
 
-  const slidesRef = useRef<HTMLUListElement>(null);
-
   useEffect(() => {
-    if (slidesRef.current) {
-      slidesRef.current.scrollLeft =
-        slidesRef.current.offsetWidth * (activeSlide - 1);
-    }
-  }, [activeSlide]);
-
-  const handleSelectorClick = (index: number) => {
-    setActiveSlide(index + 1);
-  };
-
-  const handleLeftArrowClick = () => {
-    if (!(activeSlide <= 1)) {
-      setActiveSlide(activeSlide - 1);
-    }
-  };
-
-  const handleRightArrowClick = () => {
-    if (!(activeSlide >= slides.length)) {
-      setActiveSlide(activeSlide + 1);
-    }
-  };
-
-  useEffect(() => {
-    setSlides(slidesJSON[0].imagens);
-  }, []);
-
-  useEffect(() => {
-    const editoriasData = [
+    const fakeEditorias = [
       { nome: 'governo', quantidade: 75 },
       { nome: 'carnaval', quantidade: 50 },
       { nome: 'esporte', quantidade: 45 },
@@ -70,12 +38,14 @@ const Home: React.FC = () => {
       { nome: 'outros', quantidade: 25 },
     ];
 
-    setEditorias(editoriasData);
+    setEditorias(fakeEditorias);
   }, []);
 
   useEffect(() => {
+    const [{ Editorias }] = [...noticiasJSON];
+
     setCategories(
-      noticiasJSON[0].Editorias.map(editoria => {
+      Editorias.map(editoria => {
         return editoria.Editoria;
       }),
     );
@@ -168,59 +138,20 @@ const Home: React.FC = () => {
   return (
     <>
       <Header />
-      <Main activeSlide={activeSlide}>
-        <section id="hero">
-          <div className="slider">
-            <ul className="slider__selectors">
-              {slides.map((slide, index) => {
-                return (
-                  <li
-                    onClick={() => handleSelectorClick(index)}
-                    onKeyDown={() => handleSelectorClick(index)}
-                    className="selector"
-                  />
-                );
-              })}
-            </ul>
-
-            <img
-              className="arrow arrow--left"
-              src={arrow}
-              alt="Ícone de seta"
-              onClick={handleLeftArrowClick}
-              onKeyDown={handleLeftArrowClick}
-            />
-            <img
-              className="arrow arrow--right"
-              src={arrow}
-              alt="Ícone de seta"
-              onClick={handleRightArrowClick}
-              onKeyDown={handleRightArrowClick}
-            />
-
-            <ul className="slides" ref={slidesRef}>
-              {slides.map(slide => {
-                return (
-                  <li className="slide">
-                    <img alt="Placeholder" src={`/slides/${slide}`} />
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        </section>
+      <Main>
+        <Slider />
         <section id="editorias">
           <header>
             <h1>Editorias</h1>
-            <div>
-              <div>
+            <div className="selects">
+              <div className="select-wrapper">
                 <p>Ordenar por:</p>
                 <select onChange={e => handleSorting(e.target.value)}>
                   <option>Título</option>
                   <option>Data</option>
                 </select>
               </div>
-              <div>
+              <div className="select-wrapper">
                 <p>Filtar por:</p>
                 <select onChange={e => handleFilter(e.target.value)}>
                   <option>Nenhum filtro</option>
