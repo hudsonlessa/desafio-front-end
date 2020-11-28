@@ -58,7 +58,7 @@ View this README in other languages:
 2. Categorized by *editoria* news visualization
 * Filtering by *editoria*
 * Sorting by date and by title
-3. Dynamic bar chart showing the most viwed *editorias*
+3. Dynamic bar chart showing the most viewed *editorias*
 
 
 
@@ -91,7 +91,7 @@ Before starting, you'll need the following tools installed on your machine:
 
 ## Contact
 
-Hudson Lessa - [LinkedIn](http://linkedin/in/hudsonlessa) - contact@hudsonlessa.com
+Hudson Lessa - [LinkedIn](http://linkedin.com/in/hudsonlessa) - contact@hudsonlessa.com
 
 Project link: [minutonews.hudsonlessa.com](http://minutonews.hudsonlessa.com)
 
