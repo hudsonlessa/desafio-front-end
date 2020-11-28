@@ -1,12 +1,14 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a38df661-4ef8-4b0a-91f4-b759885804da/deploy-status)](https://app.netlify.com/sites/minuto-news/deploys)
 
-
+<br>
 
 View this README in other languages:
 
 * [English](README.md)
 
-
+<br>
+<br>
+<br>
 
 <p align="center">
   <a href="http://minutonews.hudsonlessa.com">
@@ -21,6 +23,10 @@ View this README in other languages:
   </p>
 </p>
 
+<br>
+<br>
+<br>
+
 <details open="open">
   <summary>Lista de conteúdo</summary>
   <ol>
@@ -32,7 +38,7 @@ View this README in other languages:
       </ul>
     </li>
     <li>
-    <a href="#executando">Executando</a></li>
+      <a href="#executando">Executando</a></li>
       <ul>
         <li><a href="#pré-requisitos">Pré-requisitos</a></li>
         <li><a href="#instalacão">Instalação</a></li>
@@ -42,17 +48,19 @@ View this README in other languages:
   </ol>
 </details>
 
-
+<br>
 
 ## Sobre
 
+<br>
+
 [![Captura de tela do Minuto News][product-screenshot]](http://minutonews.hudsonlessa.com)
 
-Esse projeto foi proposto como teste em processo seletivo para Desenvolvedor Front-End.
+<br>
+
+Esse projeto foi proposto como teste em um processo seletivo para Desenvolvedor Front-End.
 
 Os objetivos do projeto giravam em torno do desenvolvimento do front-end da home page de um jornal fictício seguindo fielmente o *design* disponibilizado, sendo vedado, porém, o uso de *frameworks* CSS. Os objetivos incluíam o emprego de tecnologias JavaScript e de pré-processadores de CSS para o desenvolvimento.
-
-
 
 ### Construído com
 
@@ -66,7 +74,7 @@ Os objetivos do projeto giravam em torno do desenvolvimento do front-end da home
 * Ordenação por data e por título
 3. Gráfico de barras dinâmico exibindo as editorias mais visualizadas
 
-
+<br>
 
 ## Executando
 
@@ -79,27 +87,30 @@ Antes de começar, você precisará ter instalado em sua máquina as seguintes f
 ### Instalação
 
 1. Baixe este repositório
-2. Acesse a pasta raiz do repositório clonado através do CLI (*Command Line Interface*, Interface de Linha de Comando: cmd, PowerShell, bash, etc)
+2. Acesse a pasta raiz do repositório baixado através do CLI (*Command Line Interface*, Interface de Linha de Comando: cmd, PowerShell, bash, etc)
 3. Execute o seguinte comando e aguarde a instalação das dependências do projeto:
+
   ```sh
     yarn
   ```
+
 4. Execute o seguinte comando para iniciar o projeto:
-  ```ssh
+
+  ```sh
     yarn start
   ```
+
 5. Aguarde a abertura automática do seu navegador padrão já na página do projeto. Caso isso não ocorra, acesse o projeto através do seu navegador preferido no seguinte endereço:
-  ```
+
+  ```http
   localhost:3000
   ```
 
-
+<br>
 
 ## Contato
 
 Hudson Lessa - [LinkedIn](http://linkedin.com/in/hudsonlessa) - contato@hudsonlessa.com
-
-Link do projeto: [minutonews.hudsonlessa.com](http://minutonews.hudsonlessa.com)
 
 
 
