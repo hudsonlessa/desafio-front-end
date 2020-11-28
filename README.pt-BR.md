@@ -48,9 +48,11 @@ View this README in other languages:
 
 [![Captura de tela do Minuto News][product-screenshot]](http://minutonews.hudsonlessa.com)
 
-Esse projeto foi proposto pelo O Globo como teste em seu processo seletivo para Desenvolvedor Front-End.
+Esse projeto foi proposto como teste em processo seletivo para Desenvolvedor Front-End.
 
-Design e imagens: O Globo
+Os objetivos do projeto giravam em torno do desenvolvimento do front-end da home page de um jornal fictício seguindo fielmente o *design* disponibilizado, sendo vedado, porém, o uso de *frameworks* CSS. Os objetivos incluíam o emprego de tecnologias JavaScript e de pré-processadores de CSS para o desenvolvimento.
+
+
 
 ### Construído com
 

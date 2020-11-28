@@ -48,6 +48,12 @@ View this README in other languages:
 
 [![Minuto News screenshot][product-screenshot]](http://minutonews.hudsonlessa.com)
 
+This project has been proposed as a test in selective process for Front-End Developer.
+
+The project's objectives revolved around developing a fictional newspaper home page front-end, carefully following the specified design, being restricted any CSS framework usage. The objectives also included employment of JavaScript technologies and CSS pre-processors for development.
+
+
+
 ### Built with
 
 * [React](http://reactjs.org)
