@@ -97,4 +97,4 @@ Link do projeto: [minutonews.hudsonlessa.com](http://minutonews.hudsonlessa.com)
 
 
 
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: images/product-screenshot.png
