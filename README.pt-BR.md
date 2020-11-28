@@ -35,7 +35,7 @@ View this README in other languages:
     <a href="#executando">Executando</a></li>
       <ul>
         <li><a href="#pré-requisitos">Pré-requisitos</a></li>
-        <li><a href="#instalacao">Instalação</a></li>
+        <li><a href="#instalacão">Instalação</a></li>
       </ul>
     </li>
     <li><a href="#contato">Contato</a></li>
