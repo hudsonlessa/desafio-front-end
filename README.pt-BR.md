@@ -68,8 +68,8 @@ Os objetivos do projeto giravam em torno do desenvolvimento do front-end da home
 ### Funcionalidades
 1. Slider de imagens interativo
 2. Exibição de notícias categorizadas por editoria
-* Filtragem por editoria
-* Ordenação por data e por título
+    * Filtragem por editoria
+    * Ordenação por data e por título
 3. Gráfico de barras dinâmico exibindo as editorias mais visualizadas
 
 <br />
