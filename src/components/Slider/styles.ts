@@ -5,7 +5,11 @@ interface ContainerProps {
 }
 
 export const Container = styled.section<ContainerProps>`
-  height: 500px;
+  height: 360px;
+
+  @media (min-width: 768px) {
+    height: 480px;
+  }
 
   .slider {
     position: relative;
