@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import triangle from '../assets/triangle--white.png';
 
 export default createGlobalStyle`
   :root {
@@ -67,12 +68,13 @@ export default createGlobalStyle`
   select {
     -webkit-appearance: none;
     padding: 10px 8px;
+    padding-right: 24px;
     border-radius: 0;
     font-family: 'Verdana', sans-serif;
     font-size: 18.4px;
     text-transform: uppercase;
-    background: #000;
     color: #fff;
+    background: url(${triangle}) no-repeat center right 8px, #000;
   }
 
   section {
