@@ -52,8 +52,6 @@ View this README in other languages:
 
 ## About
 
-<br />
-
 [![Minuto News screenshot][product-screenshot]](http://minutonews.hudsonlessa.com)
 
 <br />

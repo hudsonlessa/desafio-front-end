@@ -25,7 +25,7 @@ interface Editoria {
 const Home: React.FC = () => {
   const [noticias, setNoticias] = useState<Noticia[]>([]);
   const [categories, setCategories] = useState<string[]>([]);
-  const [sorter, setSorter] = useState<string>('Título');
+  const [sorter, setSorter] = useState<string>('Data');
   const [filter, setFilter] = useState<string>('Nenhum filtro');
   const [editorias, setEditorias] = useState<Editoria[]>([]);
 
@@ -147,8 +147,8 @@ const Home: React.FC = () => {
               <div className="select-wrapper">
                 <p>Ordenar por:</p>
                 <select onChange={e => handleSorting(e.target.value)}>
-                  <option>Título</option>
                   <option>Data</option>
+                  <option>Título</option>
                 </select>
               </div>
               <div className="select-wrapper">
